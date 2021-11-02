@@ -10,7 +10,10 @@ rule all:
    input:
         expand(outPath + "filter/{sample}.bed", sample=SAMPLES),
         expand(outPath + "confirmed/{sample}.retroseqHitsConfirmed.bed",sample=SAMPLES)
+      
+      configfile: "config.yaml"
 
+         
 rule CramToBam:
     input:
         cram_file=cramPath + "{sample}.cram"
