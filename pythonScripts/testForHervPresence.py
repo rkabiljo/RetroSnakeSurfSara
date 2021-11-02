@@ -4,7 +4,7 @@ allContigs=[]
 contigs=[]
 
 inFile = open(sys.argv[1],'r')
-element = open(sys.argv[2],'r')
+element = sys.argv[2]
 verificationLevel=sys.argv[3]
 #print ("Checking the file " + sys.argv[1])
 #inFile=open("chr4_9602976-9603226.fa.cap.contigs.out",'r')
