@@ -23,9 +23,8 @@ for line in inFile:
             #outFile.write(ol)
             chro=line[0]
             start=line[1]
-            end=int(line[1])+1000
             outFile.write(chro + ":" + str(int(start)-200) + "-" + str(int(start)+200) + "\n")
-            outFile2.write(chro + "\t" + start + "\t" + str(end) + "\n")
+            outFile2.write(chro + "\t" + start + "\t" + str(int(start)+1) + "\n")
     
 inFile.close()
 outFile.close()
