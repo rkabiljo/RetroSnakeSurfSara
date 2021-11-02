@@ -1,6 +1,6 @@
 configfile: "config.yaml"
 
-SAMPLES = ["BAM1_PREFIX","BAM2_PREFIX","BAM3_PREFIX"]
+SAMPLES = ["sample"]
 outPath = config["outPath"]
 bamPath = config["bamPath"]
 cramPath = config["cramPath"]
@@ -10,9 +10,6 @@ rule all:
    input:
         expand(outPath + "filter/{sample}.bed", sample=SAMPLES),
         expand(outPath + "confirmed/{sample}.retroseqHitsConfirmed.bed",sample=SAMPLES)
-      
-      configfile: "config.yaml"
-
          
 rule CramToBam:
     input:
